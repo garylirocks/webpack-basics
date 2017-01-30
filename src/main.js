@@ -12,5 +12,5 @@ class Message extends React.Component {
     }
 }
 
-ReactDOM.render(<Message title="Demo" message="hello world" />,
+ReactDOM.render(<Message title="Demo" message="hello gary" />,
                 document.getElementsByClassName('react-container')[0]);
