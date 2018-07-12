@@ -1,9 +1,10 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
     entry: './src/main.js',
     output: {
-        path: 'build',
+        path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js'
     },
     devServer: {
@@ -12,14 +13,11 @@ module.exports = {
         port: 3000,
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
-                loader: 'babel',
-                query: {
-                    presets: ['es2015', 'react']
-                }
+                loader: 'babel-loader'
             },
             {
                 test: /\.scss$/,
