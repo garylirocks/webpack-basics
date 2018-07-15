@@ -7,6 +7,15 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js'
     },
+    resolve: {
+        modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    },
+    plugins: [
+        // generating hashed module names for each module
+        new webpack.HashedModuleIdsPlugin({ 
+            hashDigestLength: 5,
+        })
+    ],
     devServer: {
         inline: true,
         contentBase: './build',

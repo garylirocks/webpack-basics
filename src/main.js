@@ -1,16 +1,19 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-require('./style.scss');
+import hello from 'lib/utils';
+
+import './style.scss';
 
 class Message extends React.Component {
     render() {
         return (<div>
                     <h1>{this.props.title}</h1>
-                    <p>{this.props.message}</p>
-                </div>);
+                    <p>{hello('Gary')}</p>
+                </div>
+        );
     }
 }
 
-ReactDOM.render(<Message title="Demo" message="hello gary" />,
+ReactDOM.render(<Message title="Demo" />,
                 document.getElementsByClassName('react-container')[0]);
