@@ -22,7 +22,7 @@ module.exports = {
         contentBase: './build',
         port: 3000,
     },
-    devtool: 'cheap-module-source-map',
+    devtool: 'cheap-module-eval-source-map',    // suitable for dev
     module: {
         rules: [
             {
