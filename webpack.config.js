@@ -5,6 +5,7 @@ module.exports = {
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, 'build'),
+        devtoolModuleFilenameTemplate: '[absolute-resource-path]',
         filename: 'bundle.js'
     },
     resolve: {
@@ -21,6 +22,7 @@ module.exports = {
         contentBase: './build',
         port: 3000,
     },
+    devtool: 'cheap-module-source-map',
     module: {
         rules: [
             {
